@@ -1,0 +1,13 @@
+.post-inner-background-css {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left : 20vw;
+    margin-right : 20vw;
+}
+
+.post-left-details-css {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(230, 230, 230);
+}
