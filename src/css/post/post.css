@@ -1,13 +1,19 @@
-.post-inner-background-css {
-    display: flex;
-    justify-content: space-evenly;
-    margin-left : 20vw;
-    margin-right : 20vw;
-}
-
-.post-left-details-css {
+.post-css {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 50vw;
+}
+.post-header-css {
+    height: 2vh;
+    background: rgba(162,112,203);
+}
+
+.post-inner-background-css {
+    display:  flex;
+    justify-content: space-evenly;
+}
+
+.post-left-details-css {
     background: rgba(230, 230, 230);
 }

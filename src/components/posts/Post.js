@@ -15,7 +15,7 @@ export default function Post({post}) {
 
   return (
     <div className='post-css'>
-      <div className='post-cap-css' />
+      <div className='post-header-css' />
       <Card className='post-inner-background-css'>
         <CardContent className='post-left-css'>
           <Typography className='post-left-details-css'>
@@ -27,12 +27,14 @@ export default function Post({post}) {
               <TimelapseIcon /> {post.delete_on}
             </div>
             <div>
-              <div className='post-left-details-sub-heading-css'>Experience Required</div>{post.experience_required}
+              <div className='post-left-details-sub-heading-css'>Experience Required {post.experience_required}</div>
             </div>
             <div>
               <BusinessIcon /> {post.for_company}
             </div>
-            <div><LocationOnIcon /> {post.job_location_city}{post.job_location_country}</div>
+            <div>
+              <LocationOnIcon /> {post.job_location_city}{post.job_location_country}
+            </div>
           </Typography>
         </CardContent>
         <CardContent className='post-right-css'>

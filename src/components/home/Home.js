@@ -1,7 +1,7 @@
 import React from 'react'
-// import axios from 'axios'
 import { useState, useEffect } from "react";
 import Post from '../posts/Post';
+import '../../css/home/home.css'
 
 export default function Home() {
   const [postList, setPostList] = useState([]);
@@ -15,9 +15,17 @@ export default function Home() {
     },[]);
 
   return (
-    <div>
-      <h1>Home</h1>
-      {postList?.map((post) => <Post key={post.id} post = {post} />)}
+    <div className='home-css'>
+      <div className='home-left-css'>
+      
+      </div>
+      <div className='home-center-css'>
+        {postList?.map((post) => <Post key={post.id} post = {post} />)}
+      </div>
+    
+      <div className='home-right-css'>
+
+      </div>
     </div>
   )
 }
