@@ -1,19 +1,48 @@
 .post-css {
+    margin-top: 5vh;
+}
+
+@media (max-width: 1000px) {
+    .post-css {
+      flex-direction: column;
+    }
+}
+
+.post-inner-css {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 50vw;
 }
+
 .post-header-css {
     height: 2vh;
     background: rgba(162,112,203);
 }
 
-.post-inner-background-css {
-    display:  flex;
-    justify-content: space-evenly;
+.post-left-css {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    max-width: 13vw;
+}
+.post-left-company-icon-css {
+    display: flex;
+    border-radius: 50%;
+    max-width: 5vw;
+}
+.post-left-details-items-css {
+    vertical-align: top;
 }
 
 .post-left-details-css {
     background: rgba(230, 230, 230);
+    padding: 2vh;
+    border-radius: 5%;
+}
+
+.post-right-css {
+    margin-top: 2vh;
 }
