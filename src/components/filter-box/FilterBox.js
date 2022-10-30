@@ -45,12 +45,12 @@ export default function FilterBox({setFilterCriteria, filterCriteria, handleClic
             setCountry(newValue)
         else if(event.name==="city")
             setCity(newValue)
-
+            
         setFilterCriteria({...filterCriteria, [event.target.name]: event.target.value})
     };
 
   return (
-    <>
+    <div>
         <Box
         component="form"
         sx={{
@@ -116,6 +116,6 @@ export default function FilterBox({setFilterCriteria, filterCriteria, handleClic
                 <Button variant="contained" onClick={handleResetClick}>Reset</Button>
             </div>
         </Box>
-    </>
+    </div>
   )
 }
