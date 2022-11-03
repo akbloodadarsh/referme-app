@@ -2,8 +2,9 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import Post from '../posts/Post';
 import '../../css/home/home.css'
+import CreatePost from '../create-post/CreatePost';
 
-export default function Home() {
+export default function Home({userId}) {
   const [postList, setPostList] = useState([]);
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Home() {
       
       </div>
       <div className='home-center-css'>
+        <CreatePost userId={userId} setPostList={setPostList} />
         {postList?.map((post) => <Post key={post.id} post = {post} />)}
       </div>
     

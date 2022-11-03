@@ -24,7 +24,7 @@ export default function Login() {
     };
 
     const handleDateChange = (newValue) => {
-        setValues({ ...values, ["date_of_birth"]: newValue });
+        setValues({ ...values, "date_of_birth": newValue });
     }
 
     async function handleClick() {

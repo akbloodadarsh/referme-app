@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Cookies from 'universal-cookie';
 
-export default function Login() {
+export default function Login({setUserId}) {
     const [values, setValues] = React.useState({
         username: '',
         password: ''
@@ -31,8 +31,16 @@ export default function Login() {
         await fetch(process.env.REACT_APP_API + "api/Users/authenticate-user", requestOptions)
         .then((response) => response.json())
         .then((data) => {
-            cookies.set('token', data.token, { path: '/' });
-            console.log(cookies.get('token'))
+            //uncomment to check the response
+            //console.log(data)
+            //uncomment to check the value of user_id
+            //console.log(data['user_id'])
+            // uncomment to check token value
+            //console.log(data['token'])
+            
+            cookies.set('token', data['token'], { path: '/' });
+            setUserId(data['user_id'])
+            console.log('from login data'+ data['user_id'])
         });
     }
 
